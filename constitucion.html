@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitución y Legislación - Repaso TAI</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <p class="subtitle">Técnico Auxiliar de Informática</p>
+            <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">Constitución y <span class="highlight">Legislación</span></h1>
+            <a href="index.html" class="btn btn-secondary" style="margin-top: 1rem;">Volver al inicio</a>
+        </header>
+
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div>
+                    <h2 id="quiz-title">Cargando preguntas...</h2>
+                    <p id="quiz-progress" class="quiz-progress"></p>
+                </div>
+                <div class="score">
+                    <span id="current-score">Aciertos: 0</span> / 
+                    <span id="total-questions">Total: 0</span>
+                </div>
+            </div>
+
+            <div id="question-wrapper">
+                <div class="question-container">
+                    <p class="question-text" id="question-text"></p>
+                    <ul class="options-list" id="options-list"></ul>
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" id="prev-btn" disabled>Anterior</button>
+                    <button class="btn btn-secondary" id="restart-btn">Reiniciar</button>
+                    <button class="btn btn-primary" id="next-btn">Siguiente</button>
+                </div>
+            </div>
+
+            <div id="summary" style="display: none; text-align: center;">
+                <h2 style="margin-bottom: 1rem;">Test completado</h2>
+                <div style="font-size: 3rem; margin: 2rem 0; color: var(--constitucion);">
+                    <span id="final-score"></span>
+                </div>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);">
+                    Has acertado <strong id="correct-count"></strong> de <strong id="question-count"></strong> preguntas
+                </p>
+                <button class="btn btn-primary" id="review-btn">Revisar respuestas</button>
+                <button class="btn btn-secondary" id="restart-final-btn">Reiniciar test</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Técnico Auxiliar de Informática · Administración General del Estado</p>
+            <p class="footer-note">Realizado por ATKLA</p>
+        </footer>
+    </div>
+
+    <script src="data/constitucion_legislacion.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
